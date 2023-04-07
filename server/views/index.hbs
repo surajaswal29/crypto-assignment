@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+
+    <!-- custom CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body class="dark-theme">
+    <div class="dark-theme">
+        <div class="main-container">
+            <div class="content-row p-2">
+                <div class="col-3 responsive-justify-center">
+                    <div class="logo">
+                        <img src="./media/HODLINFO.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-3 d-center d-flex button-box">
+                    <button class="d-flex d-center">INR
+                        <span class="material-symbols-outlined">
+                        arrow_drop_down
+                        </span>
+                    </button>
+                    <button class="d-flex d-center">BTC
+                        <span class="material-symbols-outlined">
+                        arrow_drop_down
+                        </span>
+                    </button>
+                    <button>BUY BTC</button>
+                </div>
+                <div class="col-3 d-flex justify-end mt-1 responsive-justify-center ">
+                    <a href="#" class="end-btn">29</a>
+                    <a href="#" class="end-btn"><img src="./media/telegram-logo.png" class="tele-logo"> &nbsp;Connect Telegram</a>
+                    <a href="#" class="end-btn">
+                        <div class="action-btn"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="content-row">
+                <h1 class="trade-heading">Best Price to Trade</h1>
+            </div>
+            <div class="content-row j-space mt mt-mobile p-2">
+                <div class="second-section-content-box d-flex d-center">
+                    <span class="small-data">0.77 %</span>
+                    <span>5 Mins</span>
+                </div>
+                <div class="second-section-content-box d-flex d-center">
+                    <span class="small-data">1.11 %</span>
+                    <span>1 Hour</span>
+                </div>
+                <div class="second-section-content-box d-flex d-center">
+                    <span class="big-price">₹ 24,79,009</span>
+                    <span>Average BTC/INR net price including commission</span>
+                </div>
+                <div class="second-section-content-box d-flex d-center">
+                    <span class="small-data">6.09 %</span>
+                    <span>1 Day</span>
+                </div>
+                <div class="second-section-content-box d-flex d-center">
+                    <span class="small-data">13.32 %</span>
+                    <span>7 Days</span>
+                </div>
+            </div>
+            <div class="content-row p-2 table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Last</th>
+                            <th>Buy / Sell Price</th>
+                            <th>Volume</th>
+                            <th>Base Unit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each crypto as |value key|}}
+                        <tr>
+                            <td>{{addOne key}}</td>
+                            <td>{{value.name}}</td>
+                            <td>₹{{value.last}}</td>
+                            <td>₹{{value.buy}}/ ₹{{value.sell}}</td>
+                            <td>{{value.volume}}</td>
+                            <td>{{value.baseUnit}}</td>
+                        </tr>
+                        {{/each }}
+                    </tbody>
+                </table>
+            </div>
+            <div class="content-row j-space-bt px-2 border-top">
+                <div class="copyright-box">
+                    Copyright © 2023 <a href="assignment.com">assignment.com</a>
+                </div>
+                <div class="link-box">
+                    <a href="#">Support</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
