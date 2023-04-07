@@ -7,6 +7,11 @@ const hbs = require('hbs');
 
 const App = express();
 
+
+
+
+
+App.set("views", path.join(__dirname, "views"));
 App.set('view engine', 'hbs');
 
 
